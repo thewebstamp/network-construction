@@ -1,0 +1,147 @@
+.gallery-wrap {
+    width: 100%;
+    padding: 145px 10% 75px;
+    margin: auto;
+    background: var(--sBackground);
+}
+
+.gallery-wrap h2 {
+    font-family: "Fenix", serif;
+    font-size: 32px;
+    text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+}
+
+.gallery-show {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    background: rgb(236, 236, 236);
+    padding: 14px;
+    border-radius: 7px;
+}
+
+.gallery-show img {
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.gallery-wrap .overview {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    background: var(--background);
+}
+
+.overview p span {
+    font-size: 30px;
+    font-weight: 400;
+    color: red;
+}
+
+.overview p {
+    cursor: pointer;
+    font-family: "Josefin Sans", serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    padding: 10px 20px;
+}
+
+.overview p:last-child {
+    visibility: hidden;
+}
+
+.overview img {
+    height: 100vh;
+}
+
+@media (max-width: 1150px) {
+    .gallery-wrap {
+        width: 100%;
+        padding: 135px 10vw 70px;
+    }
+
+    .gallery-wrap h2 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .gallery-show {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 7px;
+        padding: 12px;
+        border-radius: 5px;
+    }
+
+    .gallery-show img {
+        width: 100%;
+        height: 130px;
+        border-radius: 5px;
+    }
+
+    .gallery-wrap .overview {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .overview p span {
+        font-size: 25px;
+    }
+
+    .overview p {
+        font-size: 23px;
+        padding: 10px;
+        font-weight: 500;
+    }
+
+    .overview p:last-child {
+        visibility: hidden;
+    }
+
+    .overview img {
+        height: auto;
+        width: 100vw;
+    }
+}
+
+@media (max-width: 685px) {
+    .gallery-wrap {
+        padding: 95px 7vw 55px;
+    }
+
+    .gallery-wrap h2 {
+        font-size: 27.5px;
+        margin-bottom: 15px;
+    }
+
+    .gallery-show {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+        padding: 10px;
+        border: none;
+    }
+
+    .gallery-show img {
+        height: 100px;
+    }
+
+    .overview p span {
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+    .overview p {
+        font-size: 20px;
+        padding: 10px;
+        font-weight: 500;
+    }
+}
